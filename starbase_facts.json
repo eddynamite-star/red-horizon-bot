@@ -1,0 +1,10 @@
+[
+  {"title":"High Bay","desc":"Tower where Starship sections are stacked.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2021/06/HighBay.jpg","link":"https://www.youtube.com/watch?v=mhJRzQsLZGg"},
+  {"title":"Mega Bay (Wide Bay)","desc":"Larger assembly bay for parallel builds.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2022/03/MegaBay.jpg","link":"https://www.youtube.com/watch?v=7Gtd-Ut5dks"},
+  {"title":"Starfactory","desc":"High-volume production facility for Starship.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2023/07/Starfactory.jpg","link":"https://www.nasaspaceflight.com/2023/07/starfactory-rollout/"},
+  {"title":"Launch Tower (Mechazilla)","desc":"146m tower with ‘chopsticks’ to catch boosters.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2022/02/Mechazilla.jpg","link":"https://www.youtube.com/watch?v=mhJRzQsLZGg"},
+  {"title":"Orbital Launch Mount (OLM)","desc":"Pad for full Starship + Super Heavy launches.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2021/08/OLM.jpg","link":"https://www.nasaspaceflight.com/starbase/"},
+  {"title":"Suborbital Pads (A & B)","desc":"Early SN-series prototype test flights.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2020/12/SuborbitalPad.jpg","link":"https://everydayastronaut.com/starbase-suborbital-launch-pads/"},
+  {"title":"Propellant Farm","desc":"Tanks for methane, oxygen, nitrogen.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2021/04/PropellantFarm.jpg","link":"https://www.nasaspaceflight.com/starbase/"},
+  {"title":"Landing/Integration Pads","desc":"Recovery, integration and testing areas.","img":"https://cdn.nasaspaceflight.com/wp-content/uploads/2022/05/LandingPad.jpg","link":"https://everydayastronaut.com/spacexs-starbase-update/"}
+]
