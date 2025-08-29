@@ -1,1 +1,35 @@
-.github/workflows/breaking.yml
+name: RedHorizon - BREAKING (15m)
+on:
+  schedule: [ { cron: "*/15 * * * *" } ]
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    concurrency: redhorizon-breaking
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: "pip" }
+      - run: pip install -r requirements.txt
+      - name: Run breaking
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          ZAPIER_HOOK_URL: ${{ secrets.ZAPIER_HOOK_URL }}
+          BREAKING_MAX_AGE_MIN: ${{ secrets.BREAKING_MAX_AGE_MIN }}
+          BREAKING_MIN_SCORE: ${{ secrets.BREAKING_MIN_SCORE }}
+        run: |
+          python - << 'PY'
+          from red_horizon.tasks import run_breaking
+          print(run_breaking())
+          PY
+      - name: Commit state
+        run: |
+          git config user.email "bot@users.noreply.github.com"
+          git config user.name "redhorizon-bot"
+          git add seen_links.json
+          git diff --staged --quiet || git commit -m "Update state [breaking]"
+          git push
+
